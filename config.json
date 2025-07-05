@@ -1,0 +1,8 @@
+{
+    "contract_path" : "./contracts/",
+    "build_path" : "./build/",
+    "dso_address": "0x5683ef6f909c9fA338bf6a2736D1b8B98b7c1Dac",
+    "prosumer_address": "0xE667B6A63F8de137a8b414be1F3715b631C429f4",
+    "consumer_address": "0x6b427d8058b99DA7Edd8344BFa562Aa2aA8cFc32",
+    "contract_address": "0xBfF7900Dbf8a688b06a71FEB094EE69767098a60"
+}
