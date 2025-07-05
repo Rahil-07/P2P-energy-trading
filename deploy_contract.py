@@ -52,7 +52,7 @@ if __name__ == "__main__":
         config = json.load(f)
 
     contract_path = os.path.join(config["contract_path"],contract_name)
-    build_path = os.path.join(config["build_path"],contract_name)
+    build_path = os.path.join(config["build_path"],contract_name).rstrip(".sol")
     DSO_ADDR = config["dso_address"]
 
     abi, bytecode = compile_contract(contract_path)
@@ -68,10 +68,12 @@ if __name__ == "__main__":
     # Save updated config back to file
     with open("config.json", "w") as f:
         json.dump(config, f, indent=4)
+    
+    os.makedirs(build_path, exist_ok=True)
 
-    with open(os.path.join(build_path,'abi.pkl'), 'wb') as f:
+    with open(f"{build_path.rstrip('.sol')}/abi.pkl", 'wb') as f:
         pickle.dump(abi, f)
 
-    with open(os.path.join(build_path,'bytecode.pkl'), 'wb') as f: 
+    with open(f"{build_path.rstrip('.sol')}/bytecode.pkl", 'wb') as f: 
         pickle.dump(bytecode, f) 
     

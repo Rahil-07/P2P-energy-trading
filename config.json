@@ -1,8 +1,8 @@
 {
-    "contract_path" : "./contracts/",
-    "build_path" : "./build/",
-    "dso_address": "0x5683ef6f909c9fA338bf6a2736D1b8B98b7c1Dac",
-    "prosumer_address": "0xE667B6A63F8de137a8b414be1F3715b631C429f4",
-    "consumer_address": "0x6b427d8058b99DA7Edd8344BFa562Aa2aA8cFc32",
-    "contract_address": "0xBfF7900Dbf8a688b06a71FEB094EE69767098a60"
+    "contract_path": "./contracts/",
+    "build_path": "./build/",
+    "dso_address": "0xA75B6E6E3d70583853Dd622a1BadA08e4aa331DB",
+    "prosumer_address": "0xeE574b3b7C91160C85eC924F8Db969b941849504",
+    "consumer_address": "0x11729A1443082843c2FD4b7Bc2b3B8ab1138324a",
+    "contract_address": "0x4fb2EcE6823B321D4014dD826545Df9aD93562db"
 }

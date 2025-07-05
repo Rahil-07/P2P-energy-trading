@@ -1,6 +1,7 @@
 from web3 import Web3
 import json
 import pickle
+import os
 import warnings
 warnings.filterwarnings("ignore", message=".*The event signature did not match the provided ABI.*")
 
@@ -11,10 +12,12 @@ web3 = Web3(Web3.HTTPProvider(ganache_url))
 with open("config.json", "r") as f:
     config = json.load(f)
 
+build_path = os.path.join(config["build_path"],"EnergyTrading")
+
 PROSUMER_ADDR = config["prosumer_address"]
 CONTRACT_ADDR = config["contract_address"]
 
-with open('abi.pkl', 'rb') as f:
+with open(f"{build_path}/abi.pkl", 'rb') as f:
     abi = pickle.load(f)
 
 EnergyTrading = web3.eth.contract(

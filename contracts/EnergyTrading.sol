@@ -86,6 +86,7 @@ contract EnergyTrading {
 
         string memory roleString = role == 1 ? "Prosumer" : "Consumer";
         ownerships[account] = Ownership(account, 0, role);
+        balances[account] = 0;
 
         emit OwnershipEvent(account, 0, roleString);
         emit StakeholderRegistered(account, roleString);
